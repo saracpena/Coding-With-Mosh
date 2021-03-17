@@ -74,4 +74,40 @@ const colors = ['red','green','blue'];
 const items = colors.map(color => `<li>'${color}'</li>`);
 console.log(items);
 
+//! Object Destructuring
+const address = {
+    street: '',
+    city: '',
+    country: ''
+};
+//! Ex.1
+    const street = address.street
+    const city = address.city
+    const country = address.country
+//! Ex. 2
+const { street: st, city: ct, country: cou } = address;
+
+//! Spread Operator
+const first = [1,2,3];
+const second = [4,5,6];
+
+const combined = first.concat(second);//concat = combine
+const combined1 = [...first, ...second];
+// flexibility to add more elements
+const combined2 = [...first,'a', ...second, 'b']; 
+// cloning
+const clone = [...first];
+
+//!Objects
+const first1 = { name: 'Sara' };
+const second1 = { job: 'Instructor' };
+
+const combined3 = {...first1, ...second1, location: 'Boston'};
+console.log(combined3);
+
+const clone1 = {...first1};
+
+//! Classes
+
+
 
