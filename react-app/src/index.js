@@ -108,6 +108,27 @@ console.log(combined3);
 const clone1 = {...first1};
 
 //! Classes
+//! ALT UP/DOWN Arrows
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+    walk() {
+        console.log("walk");
+    }
+}
 
+const person3 = new Person('Sara');
 
+class Teacher extends Person {
+    constructor(name, degree){
+      super(name) //!this is a child class inheriting from parent MUST ADD SUPER()
+      this.degree = degree;
+    }
 
+    teach() {
+        console.log("teach");
+    }
+}
+
+const teacher = new Teacher('Sara', 'BA');
