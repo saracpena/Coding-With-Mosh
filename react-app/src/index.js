@@ -1,3 +1,6 @@
+import Teacher, { promote } from './teacher';
+
+
 //! Example 1
 const person = {
     name: '',
@@ -120,15 +123,18 @@ class Person {
 
 const person3 = new Person('Sara');
 
-class Teacher extends Person {
-    constructor(name, degree){
-      super(name) //!this is a child class inheriting from parent MUST ADD SUPER()
-      this.degree = degree;
-    }
+// class Teacher extends Person {
+//     constructor(name, degree){
+//       super(name) //!this is a child class inheriting from parent MUST ADD SUPER()
+//       this.degree = degree;
+//     }
 
-    teach() {
-        console.log("teach");
-    }
-}
+//     teach() {
+//         console.log("teach");
+//     }
+// }
 
 const teacher = new Teacher('Sara', 'BA');
+
+//! MODULARITY - Splitting our classes in multiple files, each file is a module
+//? person.js and teacher.js
