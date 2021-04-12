@@ -30,3 +30,19 @@ tfoot {
 .highlight {
     background-color: yellow;
 }
+a {
+    color: orange;
+}
+/** Relational selectors */
+#products > p {
+    color: orange;
+    border: 2px solid orange;
+}
+#products + p {
+    color: orange;
+    border: 2px solid orange;
+}
+#products ~ p {
+    color: orange;
+    border: 2px solid orange;
+}
