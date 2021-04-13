@@ -1,0 +1,61 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;/** applied to border box not just isolated on content box*/
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 10px;
+    height: 200vh;
+}
+p {
+    margin: 20px; /* trbl = x y x y *//** margin collapsing*/
+    padding: 0;
+}
+.box::before {
+    content: "Hello";
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    display:inline-block;/** applies to spans i.e. inline elements not just divs i.e. block elements */
+}
+.square {
+    border: 3px solid gold;
+    width: 150px;
+    height: 150px;
+    overflow: hidden auto;
+}
+.boks {
+    width: 50%;/** 50% of the width of the PARENT Element */
+    height: 100%;
+    background-color: gold;
+    border-top: 3px solid tomato;
+}
+.boxes {
+    border: 3pm solid lightgrey;
+    position: relative;
+}
+
+.bux {
+    width: 5rem;/** these relative units are dependant on the root font size */
+    height: 5rem;
+}
+.bux-one {
+    background-color: gold;
+}
+.bux-two {
+    background-color: tomato;
+    position: fixed;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    width: auto;
+    z-index: -1;/** depth axis foreground/background */
+}
+.bux-three {
+    background-color: dodgerblue;
+}
