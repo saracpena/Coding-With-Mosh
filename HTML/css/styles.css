@@ -34,7 +34,7 @@ a {
     color: orange;
 }
 /** Relational selectors */
-#products > p {
+/* #products > p {
     color: orange;
     border: 2px solid orange;
 }
@@ -45,4 +45,31 @@ a {
 #products ~ p {
     color: orange;
     border: 2px solid orange;
-}
+} */
+/** Pseudo Class Selectors */
+/* start with a : *
+/* :first child first child in section*/
+/* :first-of-type the first occurrence of its type*/
+/* :last-of-type last occurrence of its type */
+/* :last-child last child in section */
+/* ul li: :nth-child() odd or even */
+/* a:visited, a link {
+ color: dodgerblue; 
+} */
+/* a:hover, 
+a:focus {
+    color: deeppink;
+} */
+/** Pseudo Element Selectors  */
+    /* p ::first-letter */
+    /* p :: ::first-line */
+    /* :: ::selection {
+        back-ground color: pink;
+    } */
+    /* p::before the content of the paragraph */
+    /* p ::after the content of the paragraph */
+
+/** Selectors Specificity */
+    /* ! Weight: ID, Class & Attributes, Element */
+    /* .class#id{} */
+    /* h1#id{} */
