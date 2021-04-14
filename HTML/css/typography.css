@@ -1,6 +1,7 @@
 body {
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;/**font stack ctrl+space*/
+    font-display: swap;
 }
 /* ! Styling Fonts */
 h1 {
@@ -9,6 +10,34 @@ h1 {
 p{
     font-weight: normal;
     font-style: italic;
+    /* * 1 x the font size of the root element (html)  */
     font-size: 1rem;
     color:#333;
+}
+/* ! Flash of Unstyled Text */
+
+/* ** Ideal line length is 50-70 chars, 'width: 50ch;' relative to width of 0 characters */
+
+/* ! Formatting Text: text- align, indent, decoration, transform. white-space, column-*, direction. */
+/* * +p selects paragraph after a paragraph */
+/* !truncate text (hello world...) */
+p {
+    /* width: 50ch; */
+    /* text-indent: 1rem; */
+    /* white-space: nowrap;
+    border: 3px solid gold;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+/* !multi column text */
+p{
+    /* width: 50ch;
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 3px dotted #999; */
+}
+/* !text-direction */
+p{
+    width: 50ch;
+    /* direction: rtl; USE THIS IN THE BODY {} Selector instead */
 }
