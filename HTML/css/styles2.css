@@ -1,102 +1,168 @@
 *, 
 *::before, 
 *::after {
-    box-sizing: border-box;/** applied to border box not just isolated on content box*/
-}
-html {
- 
+    box-sizing: border-box;
+    /** applied to border box not just isolated on content box*/
 }
 body {
     margin: 10px;
     height: 200vh;
 }
 p {
-    margin: 20px; /* trbl = x y x y *//** margin collapsing*/
-    padding: 0;
+    /* margin: 20px; /* trbl = x y x y *//** margin collapsing*/
+    padding: 0; */
 }
 .box::before {
-    content: "Hello";
+    /* content: "Hello"; */
 }
 .box {
-    width: 100px;
+    /* width: 100px;
     height: 100px;
-    background-color: gold;
+    background-color: gold; */
     display:inline-block;/** applies to spans i.e. inline elements not just divs i.e. block elements */
 }
 .square {
-    border: 3px solid gold;
+    /* border: 3px solid gold;
     width: 150px;
     height: 150px;
-    overflow: hidden auto;
+    overflow: hidden auto; */
 }
 .boks {
     width: 50%;/** 50% of the width of the PARENT Element */
-    height: 100%;
+    /* height: 100%;
     background-color: gold;
-    border-top: 3px solid tomato;
+    border-top: 3px solid tomato; */
 }
 .boxes {
-    border: 3pm solid lightgrey;
-    position: relative;
+    /* border: 3pm solid lightgrey;
+    position: relative; */
 }
 
 .bux {
     width: 5rem;/** these relative units are dependant on the root font size */
-    height: 5rem;
+    /* height: 5rem; */
 }
 .bux-one {
-    background-color: gold;
+    /* background-color: gold; */
 }
 .bux-two {
-    background-color: tomato;
+    /* background-color: tomato;
     position: fixed;
     top: 0;
     left: 2rem;
     right: 2rem;
-    width: auto;
+    width: auto; */
     z-index: -1;/** depth axis foreground/background */
 }
 .bux-three {
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
 }
 .tweet {
-    border: 3px solid lightgrey;
+    /* border: 3px solid lightgrey; */
 }
 .clearfix::after {
-    content: "";
+    /* content: "";
     display: block;
-    clear: both;    
+    clear: both;     */
 }
 .avatar {
-    width: 5rem;
+    /* width: 5rem;
     height: 5rem;
     background-color: gold;
     float: left;
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; */
 }
 .container {
-    border: 3px solid lightgrey;
+    /* border: 3px solid lightgrey;
     display: flex;/** Main and Cross axes */
-    flex-direction: row; 
+    /* flex-direction: row;  */
     justify-content: center;/** Aligning items: justify-content (along the main axis) align-items (along the cross axis) */
-    align-items: center;
-    height: 90vh;
+    /* align-items: center;
+    height: 90vh; */ 
 }
 .bachs {
-    flex-basis: 5rem;
+    /* flex-basis: 5rem;
     flex-grow: 1;
     width: 5rem;
     height: 5rem;
     background: gold;
-    margin: 1rem;
+    margin: 1rem; */
 }
 .bachs-one {
     /* align-self: flex-start; */ 
 }
+/* ! GRID -------- */
 .contayner {
     display: grid;
     /* 3 x 2 */
-    grid-template-rows: 100px 100px 100px;
-    grid-template-columns: 100px 100px;
+    /* grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(2, 100px); */
+    grid-template: 100px auto 100px / 100px 30fr 70fr;
+    grid-template-areas: 
+        'header header' 
+        'sidebar main' 
+        'footer footer' 
+        '.      footer';
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    /* * gap: 10px; */
     border: 3px solid lightgrey;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+.bocks {
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+}
+.bocks1 {
+    grid-column: 1 / 3;
+    /* start & end */ /* row & column */
+    /* grid-area: 1 / 1 / 3 / 3; */
+    grid-area: header;
+}
+.bocks4 {
+    grid-area: footer;
+}
+
+/* ! Hiding Elements */
+.first {
+    /* display: none; *//** hides elements as if it were never there **/
+    /* visibility: hidden; *//** hides the element but still reserves its place **/
+}
+/* ! MEDIA QUERIES */
+.containor {
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    background: gold;
+    padding: 1rem;
+}
+.box:nth-of-type(2){ /** this targets the second occurrence of an element with class of box */
+    background: dodgerblue;
+}
+//** FOR SCREENS **/
+@media screen and (min-width: 600px) {
+    .containor {
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 900px) {
+    .containor {
+        flex-direction: row;
+    }
+    .box {
+        background: white;
+    }
+}
+/** FOR PRINTERS **/
+@media print {
+    body{
+        font-size: 12pt;
+    }
+    .box {
+        padding: .5cm;
+    }  
 }
