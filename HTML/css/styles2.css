@@ -4,7 +4,7 @@
     box-sizing: border-box;/** applied to border box not just isolated on content box*/
 }
 html {
-    font-size: 62.5%;
+ 
 }
 body {
     margin: 10px;
@@ -58,4 +58,38 @@ p {
 }
 .bux-three {
     background-color: dodgerblue;
+}
+.tweet {
+    border: 3px solid lightgrey;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;    
+}
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    float: left;
+    margin-right: 0.5rem;
+}
+.container {
+    border: 3px solid lightgrey;
+    display: flex;/** Main and Cross axes */
+    flex-direction: row; 
+    justify-content: center;/** Aligning items: justify-content (along the main axis) align-items (along the cross axis) */
+    align-items: center;
+    height: 90vh;
+}
+.bachs {
+    flex-basis: 5rem;
+    flex-grow: 1;
+    width: 5rem;
+    height: 5rem;
+    background: gold;
+    margin: 1rem;
+}
+.bachs-one {
+    /* align-self: flex-start; */
 }
