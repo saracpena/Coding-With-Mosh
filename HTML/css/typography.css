@@ -1,0 +1,14 @@
+body {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;/**font stack ctrl+space*/
+}
+/* ! Styling Fonts */
+h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+p{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1rem;
+    color:#333;
+}
