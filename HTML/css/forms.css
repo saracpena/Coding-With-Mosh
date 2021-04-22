@@ -6,3 +6,18 @@ body {
 label {
     display: block;
 }
+input[type='text'],
+input[type='email'] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+}
+input[type='text']:focus,
+input[type='email']:focus {
+    border-color: #7db0fb;
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
+}
+.form-group {
+    margin-bottom: 1rem;
+}
